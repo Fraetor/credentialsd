@@ -9,6 +9,8 @@ jobs:
   build:
     env:
       RUST_LOG: debug
+      # Disable incremental compilation, as it is slower for CI.
+      CARGO_INCREMENTAL: 0
     name: Build
     runs-on: ubuntu-24.04
     steps:
