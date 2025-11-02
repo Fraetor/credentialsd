@@ -27,6 +27,8 @@ jobs:
         run: |
           # Newer version needed for --interactive flag needed below
           python3 -m pip install --user --verbose --progress-bar='off' 'meson==1.5.0'
+      - name: Cache rust dependencies
+        uses: Swatinem/rust-cache@v2
       - name: Setup meson project
         run: meson setup build
       - name: Build
