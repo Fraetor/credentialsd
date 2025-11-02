@@ -26,7 +26,7 @@ jobs:
       - name: Install Meson
         run: |
           # Newer version needed for --interactive flag needed below
-          python3 -m pip install --user -v 'meson==1.5.0'
+          python3 -m pip install --user --verbose --progress-bar='off' 'meson==1.5.0'
       - name: Setup meson project
         run: meson setup build
       - name: Build
